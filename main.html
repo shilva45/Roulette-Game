@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body onload="initialSetup()">
+    <div class="option-buttons">
+        <div class="settings-button">
+            <button id="settings-button-id" class="settings-button-text">Settings</button>
+        </div>
+
+        <div class="help-button">
+            <button id="help-button-id" class="help-button-text">Help</button>
+        </div>
+    
+        <div class="reset-button">
+            <button onclick="resetGame()" class="reset-button-text">Reset</button>
+        </div>
+    </div>
+    
+    <div id="settings-modal-id" class="settings-modal">
+        <div class="settings-modal-content">
+            <span class="settingsClose">&times;</span>
+            
+            <br>
+
+            <div class="how-to-play">
+                Settings
+            </div>
+
+            <br>
+
+            <div class="game-settings-options">
+                <div class="settings-block">
+                    <p class="game-settings-text">Lives Per Player:</p>
+                    <input type="number" id="number-1">
+                    <button id="option-1" onclick="updateSettingsLives()">Confirm</button>
+                </div>
+
+                <div class="settings-block">
+                    <p class="game-settings-text">Total Rounds:</p>
+                    <input type="number" id="number-2">
+                    <button id="option-2" onclick="updateSettingsRounds()">Confirm</button>
+                </div>
+                
+                <div class="settings-block">
+                    <p class="game-settings-text">Total Live Bullets:</p>
+                    <input type="number" id="number-3">
+                    <button id="option-3" onclick="updateSettingsBullets()">Confirm</button>
+                </div>
+                
+                <div class="settings-block">
+                    <p class="game-settings-text">Powerups Given Per Round:</p>
+                    <input type="number" id="number-4">
+                    <button id="option-4" onclick="updateSettingsPowerups()">Confirm</button>
+                </div>
+            </div>
+            
+            <br>
+
+            <div class="game-settings-options">
+                <button class="option-reset" onclick="updateSettingsReset()">Reset to Default</button>
+                
+                <button class="option-reset" onclick="setupClassicMode()">Play Classic Mode</button>
+            </div>
+
+            <div class="game-settings-options">
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="help-modal-id" class="help-modal">
+        <div class="help-modal-content">
+            <span class="helpClose">&times;</span>
+            <div class="how-to-play">
+                How To Play
+            </div>
+
+            <div class="help-text">
+                <p>In this version of roulette, you get to shoot your opponent!</p>
+                <p>If you shoot your opponent and it is a live round, your opponent loses a life! Otherwise, you lose your turn.</p>
+                <p>You can also choose to shoot yourself, and if you fire a blank round, you get to move again! If you fire a live round, you lose a life.</p>
+                
+                <br>
+                
+                <p>At the start of each chamber, each player will receive items to help them in winning the game!</p>
+
+                <br>
+
+                <table>
+                <thead>
+                    <tr>
+                        <th>Powerup</th>
+                        <th>Effect</th>
+                    </tr>
+                </thead>
+                <tbody id="powerupTableBody">
+                </tbody>
+                </table>
+                
+                <br>
+
+                <p>Each item can only be used once per turn.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="turn-display">
+        Currently Player <span id="player-turn"></span>'s turn!
+    </div>
+
+    <div class="news-display">
+        <span id="news"></span>
+    </div>
+
+    <div class="load-display">
+        <span id="load"></span>
+    </div>
+    
+    <div class="chamber-display">
+        Chamber: [ <span id="chamber"></span> ]
+    </div>
+
+    <div class="lives">
+        Player 1 Lives: <span id="p1Lives" class="player-lives"></span>
+        Player 2 Lives: <span id="p2Lives"></span>
+    </div>
+
+    <div class="shoot-button">
+        <button onclick="shootSelf()" class="shoot-button-text">Shoot Self</button>
+    </div>
+
+    <div class="shoot-button">
+        <button onclick="shootFoe()" class="shoot-button-text">Shoot Opponent</button>
+    </div>
+
+    <div class="powerup-section">
+        <div class="powerup-table">
+            <table>
+                <caption class="powerups-text">Player 1 Powerups</caption>
+                <thead>
+                    <tr>
+                        <th>Powerup</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="p1PowerupTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <div class="powerup-button">
+                <button onclick="viewAction()" class="powerup-button-text">View Action</button>
+            </div>
+            
+            <div class="powerup-button">
+                <button onclick="useKit()" class="powerup-button-text">Use Med-Kit</button>
+            </div>
+            
+            <div class="powerup-button">
+                <button onclick="useScope()" class="powerup-button-text">Use Scope</button>
+            </div>
+        
+            <div class="powerup-button">
+                <button onclick="useFlash()" class="powerup-button-text">Use Flashbang</button>
+            </div>
+        
+            <div class="powerup-button">
+                <button onclick="popRound()" class="powerup-button-text">Pop Round</button>
+            </div>
+        </div>
+
+        <div class="powerup-table">
+            <table>
+                <caption class="powerups-text">Player 2 Powerups</caption>
+                <thead>
+                    <tr>
+                        <th>Powerup</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="p2PowerupTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

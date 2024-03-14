@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.turn-display{
+    font-size: xx-large;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.news-display{
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.load-display{
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chamber-display{
+    font-size: x-large;
+    text-align: center;
+}
+
+.lives{
+    font-size: x-large;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.player-lives{
+    margin-right: 570px;
+}
+
+.shoot-button{
+    margin-top: 10px;
+    text-align: center;
+    font-size: x-large;
+}
+
+.shoot-button-text{
+    font-size: x-large;
+}
+
+.option-buttons{
+    justify-content: right;
+    display: flex;
+}
+
+.reset-button{
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.reset-button-text{
+    font-size: medium;
+}
+
+.help-button{
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.help-button-text{
+    font-size: medium;
+}
+
+.help-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 150%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+    margin-top: -100px;
+}
+
+.help-modal-content {
+    /* background-color: beige; */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.how-to-play{
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 30px;
+}
+
+.help-text{
+    font-size: large;
+}
+
+.help-text table{
+    width: 48%;
+    border-collapse: collapse;
+    border: 2px solid #000000;
+}
+
+.help-text th,
+.help-text td{
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+.helpClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.helpClose:hover,
+.helpClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.settings-button{
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.settings-button-text{
+    font-size: medium;
+}
+
+.settings-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.settings-modal-content {
+    /* background-color: beige; */
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.settings-text{
+    font-size: large;
+}
+
+.settingsClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.settingsClose:hover,
+.settingsClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.game-settings-options{
+    display: flex;
+    justify-content: center;
+}
+
+.settings-block{
+    padding: 20px;
+}
+
+.game-settings-text{
+    text-align: center;
+    font-size: large;
+}
+
+.option-reset{
+    font-size: large;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.powerup-section{
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+.powerups-text{
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.powerup-table{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.powerup-table table{
+    width: 48%;
+    border-collapse: collapse;
+    border: 2px solid #000000;
+}
+
+.powerup-table th,
+.powerup-table td{
+    background-color: #eee;
+    border: 1px solid #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+.powerup-button{
+    margin-top: 30px;
+    text-align: center;
+    font-size: x-large;
+}
+
+.powerup-button-text{
+    font-size: x-large;
+}
